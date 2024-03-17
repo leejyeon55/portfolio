@@ -1,0 +1,66 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --: #ffffff;
+  --: #f8f6f9;
+  --4: #f2f1f4;
+  --3: #dfdfdf;
+  --2: #8f8e8f;
+  --1: #404040;
+  --: #23252b;
+  --: #fdebeb;
+  --2: #fee6e6;
+  --1: #eb0b0b;
+
+  /* Fonts */
+  --type10-font-family: NanumSquare-Bold, sans-serif;
+  --type10-font-size: 10px;
+  --type10-line-height: 175%;
+  --type10-font-weight: 700;
+  --type10-font-style: normal;
+  --type13-font-family: NanumSquare-Bold, sans-serif;
+  --type13-font-size: 13px;
+  --type13-line-height: 175%;
+  --type13-font-weight: 700;
+  --type13-font-style: normal;
+  --type16-font-family: NanumSquare-Bold, sans-serif;
+  --type16-font-size: 16px;
+  --type16-line-height: 175%;
+  --type16-font-weight: 700;
+  --type16-font-style: normal;
+  --type20-font-family: NanumSquare-Bold, sans-serif;
+  --type20-font-size: 20px;
+  --type20-line-height: 175%;
+  --type20-font-weight: 700;
+  --type20-font-style: normal;
+  --type25-font-family: NanumSquare-Bold, sans-serif;
+  --type25-font-size: 25px;
+  --type25-line-height: 175%;
+  --type25-font-weight: 700;
+  --type25-font-style: normal;
+  --type31-font-family: NanumSquare-Bold, sans-serif;
+  --type31-font-size: 31px;
+  --type31-line-height: 175%;
+  --type31-font-weight: 700;
+  --type31-font-style: normal;
+  --type39-font-family: NanumSquare-Bold, sans-serif;
+  --type39-font-size: 39px;
+  --type39-line-height: 175%;
+  --type39-font-weight: 700;
+  --type39-font-style: normal;
+  --type49-font-family: NanumSquare-Bold, sans-serif;
+  --type49-font-size: 49px;
+  --type49-line-height: 175%;
+  --type49-font-weight: 700;
+  --type49-font-style: normal;
+  --type61-font-family: NanumSquare-Bold, sans-serif;
+  --type61-font-size: 61px;
+  --type61-line-height: 175%;
+  --type61-font-weight: 700;
+  --type61-font-style: normal;
+
+  /* Effects */
+  --rectangle-14-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow8-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  --shadow12-box-shadow: 12px 12px 12px 0px rgba(0, 0, 0, 0.25);
+}
