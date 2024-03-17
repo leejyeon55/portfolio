@@ -28,8 +28,8 @@ header::after{
 	content: '';
 	width: 1600px;
 	height: 1600px;
-	top: -330px;
-	left: -470px;
+	top: -240px;
+	left: -361px;
 	background: url(../img/Rectangle.png) no-repeat 100%;
 }
 header::before{
@@ -37,16 +37,16 @@ header::before{
 	content: '';
 	border: 1px solid var(--primary1);
 	border-radius: 50%;
-	width: 600px;
-	height: 600px;
-	top: -110px;
-	right: -235px;
+	width: 700px;
+	height: 700px;
+	top: -104px;
+	right: -145px;
 	opacity: .5;
 }
 header .rotate{
 	position: absolute;
-	top: -46%;
-	left: -35%;
+	top: -30%;
+	left: -27%;
 	z-index: 1;
 	opacity: .8;
 	animation: rotate 10s linear infinite;
@@ -162,7 +162,7 @@ nav ul li a:hover{
 	position: relative;
 	width: 100%;
 	max-width: 30%;
-	margin-right: 100px;
+	margin-right: 250px;
 	z-index: 5;
 }
 .profile img{
