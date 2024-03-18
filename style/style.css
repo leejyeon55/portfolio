@@ -350,7 +350,7 @@ main{
 .project1_explan{
 	background: var(--bg);
 	border-radius: 20px;
-	padding: 30px;
+	padding: 50px;
 }
 .project1_text .title{
 	justify-content: space-between;
@@ -393,11 +393,10 @@ main{
 	margin-bottom: 28px;
 }
 .project1 .period .period_right span{
-	font-size: 13px;
+	font-size: 16px;
 	color: #404040;
 	line-height: 20px;
 	margin-bottom: 28px;
-	font-weight: bold;
 }
 .project1_explan .main_text{
 	margin-top: 28px;
@@ -415,7 +414,7 @@ main{
 }
 .project1 .project1_box2 .botton>a{
 	border: 1px solid var(--primary1);
-	padding: 10px 35px;
+	padding: 20px 30px;
 	border-radius: 20px;
 	align-items: center;
 	gap: 10px;
@@ -438,7 +437,7 @@ main{
 	color: #404040;
 }
 .project1 .project1_box2 .botton>a p{
-	font-size: 16px;
+	font-size: 18px;
 	color: #404040;
 }
 
@@ -471,7 +470,7 @@ main{
 .project2_explan{
 	background: var(--bg);
 	border-radius: 20px;
-	padding: 30px;
+	padding: 50px;
 }
 .project2_text .title{
 	justify-content: space-between;
@@ -536,7 +535,7 @@ main{
 }
 .project2 .project2_box .botton>a{
 	border: 1px solid var(--primary1);
-	padding: 10px 70px;
+	padding: 20px 70px;
 	gap: 10px;
 	border-radius: 20px;
 	align-items: center;
@@ -559,7 +558,7 @@ main{
 	color: #404040;
 }
 .project2 .project2_box .botton>a p{
-	font-size: 16px;
+	font-size: 18px;
 	color: #404040;
 }
 /* ====================================
@@ -585,7 +584,7 @@ main{
 .project3_explan{
 	background: var(--bg);
 	border-radius: 20px;
-	padding: 30px;
+	padding: 50px;
 }
 .project3_text .title{
 	justify-content: space-between;
@@ -650,7 +649,7 @@ main{
 }
 .project3 .project3_box2 .botton>a{
 	border: 1px solid var(--primary1);
-	padding: 10px 70px;
+	padding: 20px 70px;
 	border-radius: 20px;
 	align-items: center;
 	gap: 10px;
@@ -674,7 +673,7 @@ main{
 }
 
 .project3 .project3_box2 .botton>a p{
-	font-size: 16px;
+	font-size: 18px;
 	color: #404040;
 }
 
