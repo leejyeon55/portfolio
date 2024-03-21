@@ -294,7 +294,8 @@ main{
 	font-weight: 700;
 }
 .skill_bar{
-	margin-top: calc(var(--row) * 4);
+	margin-top: calc(var(--row) * 5);
+	margin-bottom: calc(var(--row) * 4);
 }
 .skill_left{
 	width: 50%;
@@ -305,29 +306,38 @@ main{
 }
 .skill_bar .bar{
 	position: relative;
-	width: 400px;
-	height: var(--row);
+	width: 100%;
+	height: 20px;
 	background: var(--primary2);
 	border-radius: 30px;
 }
-.skill_bar .bar::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: var(--primary1);
-	border-radius: 30px;
-	width: 90%;
+.skill_bar .pbar{
+	--p:0;
+	width: var(--p);
 	height: 100%;
-	z-index: 1;
+	background: var(--primary1);
+	position: absolute;
+	border-radius: 30px;
+}
+.skill_bar .bar_counter{
+	position: absolute;
+	font-size:2rem;
+	font-family: 'NanumSquareNeo';
+	top: -50px;
+	right: 0;
+}
+.skill_bar .bar_counter::after{
+	content: '%';
 }
 .skill_bar p {
 	font-size: 2.5rem;
-	margin-bottom: calc(var(--row) * 4);
+	margin-bottom: var(--row);
+	font-family: 'NanumSquareNeo';
+	font-weight: 500;
+	color: #404040;
 }
-.illustrator,.photoshop,.figma,.github,
-.html-5,.css-3,.scss,.javascript{
-	justify-content: space-between;
+.skill_bar>div>div{
+	margin-bottom: calc(var(--row) * 3);
 }
 /* ====================================
     ======= section3 ======    
@@ -357,7 +367,7 @@ main{
 	position: relative;
 	width: 60%;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 5px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project1.png) no-repeat center top;
@@ -485,7 +495,7 @@ main{
 	position: relative;
 	width: 60%;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 5px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project2.png) no-repeat center top;
@@ -605,7 +615,7 @@ main{
 	position: relative;
 	width: 60%;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 5px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project3.png) no-repeat top;
