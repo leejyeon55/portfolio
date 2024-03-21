@@ -67,23 +67,11 @@ nav{
 }
 nav .logo{
 	position: relative;
-	top: 28px;
-	
+	top: -50px;
+	left: -10px;
 }
-nav .logo img{
-	width: 80px;
-}
-nav .logo::before{
-	position: absolute;
-	content: '';
-	width: 105px;
-	height: 105px;
-	border-radius: 50%;
-	background: #fff;
-	left: -12px;
-	top: -12px;
-	opacity: .5;
-	z-index: -1;
+nav .logo #lottie{
+	width: 40%;
 }
 nav ul{
 	position: absolute;
@@ -951,3 +939,8 @@ footer .top span{
 	transform: translateY(-50%);
 	z-index: 9;
 }
+
+
+
+
+

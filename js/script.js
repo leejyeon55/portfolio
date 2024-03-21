@@ -110,3 +110,13 @@ bar.forEach((el) => {
   });
   tm.to(pbar, { "--p": tg }, 0);
 });
+
+
+// lottie logo
+const lottie=bodymovin.loadAnimation({
+  container:document.querySelector('#lottie'),
+  renderer:'svg',//렌더링방식 svg/canvas/html
+  loop:true,
+  autoplay:true,
+  path:'./img/logo.json',
+})
