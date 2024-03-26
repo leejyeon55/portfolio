@@ -781,8 +781,8 @@ main{
 	display: flex;
 }
 .artwork_img .graphic img{
-	width: 350px;
-	height: 490px;
+	width: 500px;
+	height: 500px;
 	border-radius: 20px;
 }
 .imgbox{
@@ -942,5 +942,35 @@ footer .top span{
 
 
 
-
-
+/* artwork */
+.imgbox .caption a{
+	color: #fff;
+	font-size: 15px;
+	margin-top: 28px;
+	border: 1px solid;
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: 300;
+}
+#lightbox{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+#lightboxImage{
+    width: 80%;
+    height: 80vh;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    overflow-y: auto;
+}
