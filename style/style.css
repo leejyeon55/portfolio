@@ -16,6 +16,37 @@
 	margin: auto;
 }
 /* ====================================
+    ======= followAnimation ======    
+==================================== */	
+.followAnimation {
+	position: fixed;
+	top: 0;
+	left: 0;
+  	will-change: transform;
+  	transform: translate(0,0);
+	z-index: 99999;
+}
+.followAnimation::after{
+	position: absolute;
+	content: '';
+	top: -5px;
+	left: -5px;
+	width: 7px;
+	height: 7px;
+	background-color: var(--primary1);
+	border-radius: 100%;
+}
+.followAnimation::before{
+	top: -17px;
+	left: -17px;
+	position: absolute;
+	content: '';
+	width: 30px;
+	height: 30px;
+	border:1px solid var(--primary1);
+	border-radius: 100%;
+}
+/* ====================================
     ======= header ======    
 ==================================== */	
 header{
@@ -255,6 +286,12 @@ main{
 .education .text_box p{
 	margin-bottom: 20px;
 	color: #404040;
+}
+.introduce .text_box a{
+	margin-bottom: 20px;
+	color: #404040;
+	font-family: 'NanumSquareNeo';
+	font-size: 2rem;
 }
 .personalities .text_box span{
 	background-color: #fff;
@@ -1021,6 +1058,11 @@ footer{
 	font-size: 20px;
 	font-family: 'NanumSquareNeo';
 	margin-right: 40px;
+	color: var(--text2);
+}
+.contect_num a{
+	font-size: 20px;
+	font-family: 'NanumSquareNeo';
 	color: var(--text2);
 }
 .contect_num>div b{

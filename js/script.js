@@ -1,3 +1,28 @@
+const el = document.querySelector('.followAnimation');
+//마우스 좌표
+let mouseX = 0;
+let mouseY = 0;
+//요소좌표
+let currentX = 0;
+let currentY = 0;
+//브라우저의 마우스 좌표값얻기
+document.addEventListener('mousemove',(e)=>{
+    mouseX=e.clientX;
+    mouseY=e.clientY;
+    console.log(mouseX,mouseY);
+});
+tick();
+function tick(){
+    requestAnimationFrame(tick);
+    currentX += (mouseX - currentX) * .1;
+    currentY += (mouseY - currentY) * .1;
+    el.style.transform=`translate(${currentX}px,${currentY}px)`;
+    // el.style.left=currentX+'px';
+    // el.style.top=currentY+'px';
+
+}
+
+
 // lottie logo
 const lottie=bodymovin.loadAnimation({
   container:document.querySelector('#lottie'),
@@ -145,8 +170,8 @@ gsap.to('.project4', {
 	duration: 1,
 	opacity:1
 });
-gsap.to('#contact', {
-	scrollTrigger: '#contact',
+gsap.to('#contect', {
+	scrollTrigger: '#contect',
 	padding: '0px',
 	duration: 1,
 	opacity:1
@@ -168,7 +193,7 @@ lightbox.on('click',function (){
 })
 
 
-//contact me
+//contect me
 document.addEventListener('mousemove',parallax);
 function parallax(e){
     this.querySelectorAll('.effect span').forEach((el) => {
