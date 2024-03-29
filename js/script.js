@@ -145,6 +145,12 @@ gsap.to('.project4', {
 	duration: 1,
 	opacity:1
 });
+gsap.to('#contact', {
+	scrollTrigger: '#contact',
+	padding: '0px',
+	duration: 1,
+	opacity:1
+});
 
 
 //art work load
@@ -160,4 +166,15 @@ pics.on('click',function (e){
 lightbox.on('click',function (){
   lightbox.css('display','none');
 })
-console.log(bigLocation);
+
+
+//contact me
+document.addEventListener('mousemove',parallax);
+function parallax(e){
+    this.querySelectorAll('.effect span').forEach((el) => {
+        const pos = el.getAttribute('data-value');
+        const x=(window.innerWidth - e.pageX * pos) / 400 ;
+        const y=(window.innerHeight - e.pageY * pos) / 400;
+        el.style.transform=`translateX(${x}px) translateY(${y}px)`
+    });
+};
