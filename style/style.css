@@ -24,7 +24,7 @@
 	left: 0;
   	will-change: transform;
   	transform: translate(0,0);
-	z-index: 99999;
+	z-index: 9;
 }
 .followAnimation::after{
 	position: absolute;
@@ -99,11 +99,11 @@ nav{
 }
 nav .logo{
 	position: relative;
-	top: -50px;
+	top: -30px;
 	left: -10px;
 }
 nav .logo #lottie{
-	width: 40%;
+	width: 30%;
 }
 nav ul{
 	position: absolute;
@@ -205,11 +205,11 @@ nav ul li a:hover{
 	max-width: 30%;
 	margin-right: 250px;
 	z-index: 5;
-	top: 53px;
-	right: 90px;
+	top: 20px;
+	right: 200px;
 }
 .profile img{
-	width: 120%;
+	width: 200%;
 }
 /* ====================================
     ======= main ======    
