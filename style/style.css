@@ -58,6 +58,13 @@ header .rotate{
 	  transform: rotate(1turn);
 	}
   }
+  header .star img{
+    position: absolute;
+    z-index: 9;
+    top: 430px;
+    left: 810px;
+    width: 100px;
+  }
 nav{
 	width: 100%;
 	max-height: calc(var(--row) * 4);
@@ -349,8 +356,9 @@ main{
 	color: #9f9f9f;
 }
 .project1{
+	opacity: 0;
 	justify-content: space-between;
-	padding-top: calc(var(--row) * 4);
+	padding-top: calc(var(--row) * 8);
 	margin-bottom: calc(var(--row) * 8);
 }
 .project1_box{
@@ -362,10 +370,10 @@ main{
 	overflow: hidden;
 	background: url(../img/project1.png) no-repeat center top;
 	background-size: 100%;
+	transition: all 1.5s;
 }
 .project1_box:hover{
 	background: url(../img/project1.png) no-repeat center bottom;
-	transition: all 1.5s;
 	background-size: 100%;
 }
 .project1_box img{
@@ -420,21 +428,19 @@ main{
 	color: #404040;
 	margin-bottom: 28px;
 }
-.project1 .period .period_right span{
-	font-size: 17px;
-	color: #404040;
-	line-height: 20px;
-	margin-bottom: 28px;
-}
 .project1_explan .main_text{
 	margin-top: 28px;
 }
 .project1_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project1_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project1 .project1_box2 .botton{
 	justify-content: space-around;
@@ -474,6 +480,7 @@ main{
     ======= section4 ======    
 ==================================== */	
 .project2{
+	opacity: 0;
 	justify-content: space-between;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
@@ -489,11 +496,11 @@ main{
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project2.png) no-repeat center top;
+	transition: all 1.5s;
 	background-size: 100%;
 }
 .project2_box2:hover{
 	background: url(../img/project2.png) no-repeat center bottom;
-	transition: all 1.5s;
 	background-size: 100%;
 }
 .project2_box2 img{
@@ -555,11 +562,15 @@ main{
 	margin-top: 28px;
 }
 .project2_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project2_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project2 .project2_box .botton{
 	justify-content: space-around;
@@ -597,6 +608,7 @@ main{
     ======= section5 ======    
 ==================================== */	
 .project3{
+	opacity: 0;
 	justify-content: space-between;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
@@ -609,11 +621,11 @@ main{
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project3.png) no-repeat top;
+	transition: all 1.5s;
 	background-size: 100%;
 }
 .project3_box:hover{
 	background: url(../img/project3.png) no-repeat center bottom;
-	transition: all 1.5s;
 	background-size: 100%;
 }
 .project3_box img{
@@ -678,11 +690,15 @@ main{
 	margin-top: 28px;
 }
 .project3_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project3_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project3 .project3_box2 .botton{
 	justify-content: space-around;
@@ -721,6 +737,7 @@ main{
     ======= section6 ======    
 ==================================== */	
 .project4{
+	opacity: 0;
 	justify-content: space-between;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
@@ -735,12 +752,13 @@ main{
 	border-radius: 5px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
-	background: url(../img/project4.png) no-repeat center top;
+	background: url(../img/project4.png) no-repeat center top;	
+	transition: all 1.5s;
 	background-size: 100%;
 }
 .project4_box2:hover{
 	background: url(../img/project4.png) no-repeat center bottom;
-	transition: all 1.5s;
+
 	background-size: 100%;
 }
 .project4_box2 img{
@@ -802,11 +820,15 @@ main{
 	margin-top: 28px;
 }
 .project4_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project4_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project4 .project4_box .botton{
 	justify-content: space-around;
@@ -1062,11 +1084,12 @@ footer .top{
 footer .top span{
 	position: relative;
 	font-size: 5rem;
-	color: var(--text3);
+	color: var(--primary1);
 	top: 50%;
 	left: 10px;
 	transform: translateY(-50%);
 	z-index: 9;
+	opacity: .7;
 }
 
 

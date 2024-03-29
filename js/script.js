@@ -1,3 +1,12 @@
+// lottie logo
+const lottie=bodymovin.loadAnimation({
+  container:document.querySelector('#lottie'),
+  renderer:'svg',//렌더링방식 svg/canvas/html
+  loop:true,
+  autoplay:true,
+  path:'./img/logo.json',
+})
+
 //타이핑 효과
 const target = document.querySelector("#dynamic");
 function blink() {
@@ -112,14 +121,31 @@ bar.forEach((el) => {
 });
 
 
-// lottie logo
-const lottie=bodymovin.loadAnimation({
-  container:document.querySelector('#lottie'),
-  renderer:'svg',//렌더링방식 svg/canvas/html
-  loop:true,
-  autoplay:true,
-  path:'./img/logo.json',
-})
+gsap.to('.project1', {
+	scrollTrigger: '.project1',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('.project2', {
+	scrollTrigger: '.project2',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('.project3', {
+	scrollTrigger: '.project3',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('.project4', {
+	scrollTrigger: '.project4',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+
 
 //art work load
 const pics=$('.pic');
