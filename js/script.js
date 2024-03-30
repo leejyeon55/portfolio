@@ -1,3 +1,37 @@
+const el = document.querySelector('.followAnimation');
+//마우스 좌표
+let mouseX = 0;
+let mouseY = 0;
+//요소좌표
+let currentX = 0;
+let currentY = 0;
+//브라우저의 마우스 좌표값얻기
+document.addEventListener('mousemove',(e)=>{
+    mouseX=e.clientX;
+    mouseY=e.clientY;
+    console.log(mouseX,mouseY);
+});
+tick();
+function tick(){
+    requestAnimationFrame(tick);
+    currentX += (mouseX - currentX) * .1;
+    currentY += (mouseY - currentY) * .1;
+    el.style.transform=`translate(${currentX}px,${currentY}px)`;
+    // el.style.left=currentX+'px';
+    // el.style.top=currentY+'px';
+
+}
+
+
+// lottie logo
+const lottie=bodymovin.loadAnimation({
+  container:document.querySelector('#lottie'),
+  renderer:'svg',//렌더링방식 svg/canvas/html
+  loop:true,
+  autoplay:true,
+  path:'./img/logo.json',
+})
+
 //타이핑 효과
 const target = document.querySelector("#dynamic");
 function blink() {
@@ -112,14 +146,37 @@ bar.forEach((el) => {
 });
 
 
-// lottie logo
-const lottie=bodymovin.loadAnimation({
-  container:document.querySelector('#lottie'),
-  renderer:'svg',//렌더링방식 svg/canvas/html
-  loop:true,
-  autoplay:true,
-  path:'./img/logo.json',
-})
+gsap.to('.project1', {
+	scrollTrigger: '.project1',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('.project2', {
+	scrollTrigger: '.project2',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('.project3', {
+	scrollTrigger: '.project3',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('.project4', {
+	scrollTrigger: '.project4',
+	y: '-100px',
+	duration: 1,
+	opacity:1
+});
+gsap.to('#contect', {
+	scrollTrigger: '#contect',
+	padding: '0px',
+	duration: 1,
+	opacity:1
+});
+
 
 //art work load
 const pics=$('.pic');
@@ -134,4 +191,15 @@ pics.on('click',function (e){
 lightbox.on('click',function (){
   lightbox.css('display','none');
 })
-console.log(bigLocation);
+
+
+//contect me
+document.addEventListener('mousemove',parallax);
+function parallax(e){
+    this.querySelectorAll('.effect span').forEach((el) => {
+        const pos = el.getAttribute('data-value');
+        const x=(window.innerWidth - e.pageX * pos) / 400 ;
+        const y=(window.innerHeight - e.pageY * pos) / 400;
+        el.style.transform=`translateX(${x}px) translateY(${y}px)`
+    });
+};

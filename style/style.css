@@ -16,6 +16,39 @@
 	margin: auto;
 }
 /* ====================================
+    ======= followAnimation ======    
+==================================== */	
+.followAnimation {
+	position: fixed;
+	top: 0;
+	left: 0;
+  	will-change: transform;
+  	transform: translate(0,0);
+	z-index: 9;
+	user-select: none;
+    pointer-events: none;
+}
+.followAnimation::after{
+	position: absolute;
+	content: '';
+	top: -5px;
+	left: -5px;
+	width: 7px;
+	height: 7px;
+	background-color: var(--primary1);
+	border-radius: 100%;
+}
+.followAnimation::before{
+	top: -17px;
+	left: -17px;
+	position: absolute;
+	content: '';
+	width: 30px;
+	height: 30px;
+	border:1px solid var(--primary1);
+	border-radius: 100%;
+}
+/* ====================================
     ======= header ======    
 ==================================== */	
 header{
@@ -58,6 +91,7 @@ header .rotate{
 	  transform: rotate(1turn);
 	}
   }
+
 nav{
 	width: 100%;
 	max-height: calc(var(--row) * 4);
@@ -67,11 +101,11 @@ nav{
 }
 nav .logo{
 	position: relative;
-	top: -50px;
+	top: -30px;
 	left: -10px;
 }
 nav .logo #lottie{
-	width: 40%;
+	width: 30%;
 }
 nav ul{
 	position: absolute;
@@ -173,11 +207,11 @@ nav ul li a:hover{
 	max-width: 30%;
 	margin-right: 250px;
 	z-index: 5;
-	top: 53px;
-	right: 90px;
+	top: 20px;
+	right: 200px;
 }
 .profile img{
-	width: 120%;
+	width: 200%;
 }
 /* ====================================
     ======= main ======    
@@ -213,6 +247,9 @@ main{
 }
 .quicklee .img2 img{
 	width: 144px;
+}
+.intro_img{
+	display: none;
 }
 .intro_text{
 	font-size: 4.8rem;
@@ -254,6 +291,12 @@ main{
 .education .text_box p{
 	margin-bottom: 20px;
 	color: #404040;
+}
+.introduce .text_box a{
+	margin-bottom: 20px;
+	color: #404040;
+	font-family: 'NanumSquareNeo';
+	font-size: 2rem;
 }
 .personalities .text_box span{
 	background-color: #fff;
@@ -349,8 +392,9 @@ main{
 	color: #9f9f9f;
 }
 .project1{
+	opacity: 0;
 	justify-content: space-between;
-	padding-top: calc(var(--row) * 4);
+	padding-top: calc(var(--row) * 8);
 	margin-bottom: calc(var(--row) * 8);
 }
 .project1_box{
@@ -362,10 +406,10 @@ main{
 	overflow: hidden;
 	background: url(../img/project1.png) no-repeat center top;
 	background-size: 100%;
+	transition: all 1.5s;
 }
 .project1_box:hover{
 	background: url(../img/project1.png) no-repeat center bottom;
-	transition: all 1.5s;
 	background-size: 100%;
 }
 .project1_box img{
@@ -420,21 +464,19 @@ main{
 	color: #404040;
 	margin-bottom: 28px;
 }
-.project1 .period .period_right span{
-	font-size: 17px;
-	color: #404040;
-	line-height: 20px;
-	margin-bottom: 28px;
-}
 .project1_explan .main_text{
 	margin-top: 28px;
 }
 .project1_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project1_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project1 .project1_box2 .botton{
 	justify-content: space-around;
@@ -474,6 +516,7 @@ main{
     ======= section4 ======    
 ==================================== */	
 .project2{
+	opacity: 0;
 	justify-content: space-between;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
@@ -489,11 +532,11 @@ main{
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project2.png) no-repeat center top;
+	transition: all 1.5s;
 	background-size: 100%;
 }
 .project2_box2:hover{
 	background: url(../img/project2.png) no-repeat center bottom;
-	transition: all 1.5s;
 	background-size: 100%;
 }
 .project2_box2 img{
@@ -555,11 +598,15 @@ main{
 	margin-top: 28px;
 }
 .project2_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project2_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project2 .project2_box .botton{
 	justify-content: space-around;
@@ -597,6 +644,7 @@ main{
     ======= section5 ======    
 ==================================== */	
 .project3{
+	opacity: 0;
 	justify-content: space-between;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
@@ -609,11 +657,11 @@ main{
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/project3.png) no-repeat top;
+	transition: all 1.5s;
 	background-size: 100%;
 }
 .project3_box:hover{
 	background: url(../img/project3.png) no-repeat center bottom;
-	transition: all 1.5s;
 	background-size: 100%;
 }
 .project3_box img{
@@ -678,11 +726,15 @@ main{
 	margin-top: 28px;
 }
 .project3_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project3_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project3 .project3_box2 .botton{
 	justify-content: space-around;
@@ -721,6 +773,7 @@ main{
     ======= section6 ======    
 ==================================== */	
 .project4{
+	opacity: 0;
 	justify-content: space-between;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
@@ -735,12 +788,13 @@ main{
 	border-radius: 5px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
-	background: url(../img/project4.png) no-repeat center top;
+	background: url(../img/project4.png) no-repeat center top;	
+	transition: all 1.5s;
 	background-size: 100%;
 }
 .project4_box2:hover{
 	background: url(../img/project4.png) no-repeat center bottom;
-	transition: all 1.5s;
+
 	background-size: 100%;
 }
 .project4_box2 img{
@@ -802,11 +856,15 @@ main{
 	margin-top: 28px;
 }
 .project4_explan .main_text p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #404040;
 	font-family: 'NanumSquareNeo';
-	line-height: 35px;
-	margin-bottom: calc(var(--row) * 4);
+	line-height: 45px;
+}
+.project4_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
 }
 .project4 .project4_box .botton{
 	justify-content: space-around;
@@ -954,6 +1012,7 @@ main{
     ======= footer ======    
 ==================================== */	
 footer{
+	padding-top: 100px;
 	width: 100%;
 	background: var(--bg2);
 	position: relative;
@@ -1004,6 +1063,11 @@ footer{
 	font-size: 20px;
 	font-family: 'NanumSquareNeo';
 	margin-right: 40px;
+	color: var(--text2);
+}
+.contect_num a{
+	font-size: 20px;
+	font-family: 'NanumSquareNeo';
 	color: var(--text2);
 }
 .contect_num>div b{
@@ -1062,11 +1126,55 @@ footer .top{
 footer .top span{
 	position: relative;
 	font-size: 5rem;
-	color: var(--text3);
+	color: var(--primary1);
 	top: 50%;
 	left: 10px;
 	transform: translateY(-50%);
 	z-index: 9;
+	opacity: .7;
+}
+.effect span{
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+	box-shadow: 4px 4px 4px rgba(0,0,0,.3);
+	border-radius: 5px;
+}
+.effect span:nth-child(1){
+    top: 60%;
+    left: 70%;
+    background-color: #FCA81F;
+    z-index: 3;
+}
+.effect span:nth-child(2){
+    top: 65%;
+    left: 85%;
+    background-color: #E82B59;
+    z-index: 3;
+}
+.effect span:nth-child(3){
+    top: 5%;
+    left: 45%;
+    background-color: #2C67DB;
+    z-index: 3;
+}
+.effect span:nth-child(4){
+    top: 70%;
+    left: 40%;
+    background-color: #F5F402;
+    z-index: 3;
+}
+.effect span:nth-child(5){
+    top: 25%;
+    left: 30%;
+    background-color: #E82B59;
+    z-index: 3;
+}
+.effect span:nth-child(6){
+    top: 30%;
+    left: 80%;
+    background-color: rgb(150, 255, 112);
+    z-index: 3;
 }
 
 
@@ -1102,4 +1210,534 @@ footer .top span{
     transform: translateX(-50%);
     position: fixed;
     overflow-y: auto;
+}
+
+/* ====================================
+    ======= 반응형 1710 - ======    
+==================================== */	
+@media screen and (min-width: 1643px) and (max-width: 1700px) {
+	.profile{
+		margin-right: 150px;
+	}
+	.banner_text .main_text p{
+		font-size: 58px;
+	}
+	.project1_explan,
+	.project2_explan,
+	.project3_explan,
+	.project4_explan {
+		padding: 30px;
+	}
+	.project1_explan .main_text p,
+	.project2_explan .main_text p,
+	.project3_explan .main_text p,
+	.project4_explan .main_text p{
+		font-size: 18px;
+	}
+	.project1 .project1_box2 .botton>a {
+		padding: 15px 20px;
+	}
+	.project2 .project2_box .botton>a,
+	.project3 .project3_box2 .botton>a,
+	.project4 .project4_box .botton>a{
+		padding: 20px 60px;
+	}
+	.artwork_img .imgbox img{
+		width: 425px;
+		height: 425px;
+	}
+	.footer_right{
+		margin-left: 0;
+		padding-right: 50px;
+	}
+	.contect_num>div{
+		margin-right: 20px;
+	}
+}
+@media screen and (min-width: 1387px) and (max-width: 1642px) {
+	.profile{
+		margin-right: 120px;
+	}
+	#lottie{
+		width: 25%;
+	}
+	.banner_text .main_text p{
+		font-size: 50px;
+	}
+	header .rotate{
+		top: -335px;
+		left: -564px;
+	}
+	header::before{
+		width: 600px;
+		height: 600px;
+		top: -180px;
+		right: -167px;
+	}
+	header::after{
+		width: 1500px;
+		height: 1500px;
+		top: -350px;
+		left: -450px;
+	}
+	/* section1 */
+	.quicklee .intro_text{
+		font-size: 38px;
+		margin: 0;
+	}
+	.quicklee .img1 img{
+		width: 150px;
+	}
+	.quicklee .img2 img{
+		width: 100px;
+	}
+	.section1 .intro h3{
+		font-size: 25px;
+	}
+	.introduce .text_box,
+	.education .text_box{
+		font-size: 18px;
+		gap: 25px;
+	}
+	.personalities .text_box{
+		font-size: 18px;
+	}
+	.personalities .text_box span{
+		padding: 15px;
+		margin-right: 10px;
+	}
+
+	/* project */
+
+	.project1_explan,
+	.project2_explan,
+	.project3_explan,
+	.project4_explan {
+		padding: 20px;
+	}
+	.project1_text .title h2,
+	.project2_text .title h2,
+	.project3_text .title h2,
+	.project4_text .title h2{
+		font-size: 25px;
+	}
+	.period_left{
+		margin-right: 10px;
+	}
+	.period_left span{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right p{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right span{
+		font-size: 18px;
+	}
+	.project1_explan .main_text p,
+	.project2_explan .main_text p,
+	.project3_explan .main_text p,
+	.project4_explan .main_text p{
+		font-size: 16px;
+		height: 300px;
+		overflow-y: scroll;
+		margin-bottom: 20px;
+		padding-right: 20px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar,
+	.project2_explan .main_text p::-webkit-scrollbar,
+	.project3_explan .main_text p::-webkit-scrollbar,
+	.project4_explan .main_text p::-webkit-scrollbar{
+		background-color: rgb(212, 212, 212);
+		width: 10px;
+		border-radius: 50px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar-thumb,
+	.project2_explan .main_text p::-webkit-scrollbar-thumb,
+	.project3_explan .main_text p::-webkit-scrollbar-thumb,
+	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+		background-color: rgb(170, 170, 170);
+		border-radius: 50px;
+	}
+	.project1 .project1_box2 .botton>a {
+		padding: 15px 15px;
+		
+	}
+	.project2 .project2_box .botton>a,
+	.project3 .project3_box2 .botton>a,
+	.project4 .project4_box .botton>a{
+		padding: 20px 40px;
+	}
+	.project4{
+		margin-bottom: 100px;
+	}
+	/* artwork */
+	.artwork_btn li a{
+		padding: 20px 100px;
+	}
+	.artwork_img .imgbox img{
+		width: 355px;
+		height: 355px;
+	}
+	footer{
+		padding: 0;
+	}
+	.footer{
+		padding-bottom: 0;
+	}
+	.footer_left{
+		margin-right: 0;
+	}
+	.footer_right{
+		margin-left: 0;
+		padding-right: 0;
+	}
+	.contect_num{
+		flex-direction: column;
+	}
+	.contect_num{
+		font-size: 18px;
+	}
+	.tel{
+		margin-bottom: 20px;
+	}
+
+}
+@media screen and (min-width: 900px) and (max-width: 1386px) {
+	.profile{
+		margin-right: 120px;
+	}
+	#lottie{
+		width: 25%;
+	}
+	.banner_text .main_text p{
+		font-size: 50px;
+	}
+	header .rotate{
+		top: -335px;
+		left: -564px;
+	}
+	header::before{
+		width: 600px;
+		height: 600px;
+		top: -180px;
+		right: -167px;
+	}
+	header::after{
+		width: 1500px;
+		height: 1500px;
+		top: -350px;
+		left: -450px;
+	}
+	/* section1 */
+	.quicklee .intro_text{
+		font-size: 38px;
+		margin: 0;
+	}
+	.quicklee .img1 img{
+		width: 150px;
+	}
+	.quicklee .img2 img{
+		width: 100px;
+	}
+	.section1 .intro h3{
+		font-size: 25px;
+	}
+	.introduce .text_box,
+	.education .text_box{
+		font-size: 18px;
+		gap: 25px;
+	}
+	.personalities .text_box{
+		font-size: 18px;
+	}
+	.personalities .text_box span{
+		padding: 15px;
+		margin-right: 10px;
+	}
+
+	/* project */
+
+	.project1_explan,
+	.project2_explan,
+	.project3_explan,
+	.project4_explan {
+		padding: 20px;
+	}
+	.project1_text .title h2,
+	.project2_text .title h2,
+	.project3_text .title h2,
+	.project4_text .title h2{
+		font-size: 25px;
+	}
+	.period_left{
+		margin-right: 10px;
+	}
+	.period_left span{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right p{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right span{
+		font-size: 18px;
+	}
+	.project1_explan .main_text p,
+	.project2_explan .main_text p,
+	.project3_explan .main_text p,
+	.project4_explan .main_text p{
+		font-size: 16px;
+		height: 300px;
+		overflow-y: scroll;
+		margin-bottom: 20px;
+		padding-right: 20px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar,
+	.project2_explan .main_text p::-webkit-scrollbar,
+	.project3_explan .main_text p::-webkit-scrollbar,
+	.project4_explan .main_text p::-webkit-scrollbar{
+		background-color: rgb(212, 212, 212);
+		width: 10px;
+		border-radius: 50px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar-thumb,
+	.project2_explan .main_text p::-webkit-scrollbar-thumb,
+	.project3_explan .main_text p::-webkit-scrollbar-thumb,
+	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+		background-color: rgb(170, 170, 170);
+		border-radius: 50px;
+	}
+	.project1 .project1_box2 .botton>a {
+		padding: 15px 15px;
+		
+	}
+	.project2 .project2_box .botton>a,
+	.project3 .project3_box2 .botton>a,
+	.project4 .project4_box .botton>a{
+		padding: 20px 40px;
+	}
+	.project4{
+		margin-bottom: 100px;
+	}
+	/* artwork */
+	.artwork_btn li a{
+		padding: 20px 100px;
+	}
+	.artwork_img .imgbox img{
+		width: 355px;
+		height: 355px;
+	}
+	footer{
+		padding: 0;
+	}
+	.footer{
+		padding-bottom: 0;
+	}
+	.footer_left{
+		margin-right: 0;
+	}
+	.footer_right{
+		margin-left: 0;
+		padding-right: 0;
+	}
+	.contect_num{
+		flex-direction: column;
+	}
+	.contect_num{
+		font-size: 18px;
+	}
+	.tel{
+		margin-bottom: 20px;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	.profile{
+		display: none;
+	}
+	.gnb{
+		display: none;
+	}
+	.banner_text .main_text p{
+		font-size: 45px;
+	}
+	header .rotate{
+		top: -357px;
+		left: -807px;
+	}
+	header::before{
+		width: 500px;
+		height: 500px;
+		top: -100px;
+		right: -277px;
+	}
+	header::after{
+		display: none;
+	}
+	.banner_text .banner_btn a{
+		padding: 20px 30px;
+	}
+	.banner{
+		height: 660px;
+	}
+	/* section1 */
+	.section1{
+		position: relative;
+	}
+	.quicklee .intro_text{
+		font-size: 38px;
+		margin: 0;
+		width: 80%;
+		flex-direction: column;
+		line-height: 60px;
+	}
+	.quicklee{
+		flex-direction: column;
+		align-items: center;
+	}
+	.quicklee .img1 img{
+		display: none;
+	}
+	.quicklee .img2 img{
+		display: none;
+	}
+	.intro_img{
+		margin-top: 30px;
+		display: block;
+	}
+	.intro_img img{
+		width: 250px;
+	}
+	.personalities .text_bottom{
+		display: none;
+	}
+	.personalities h3{
+		display: none;
+	}
+	.personalities .text_top{
+		position: absolute;
+		top: 760px;
+		left: 21%;
+		width: 100%;
+	}
+	.introduce,
+	.education{
+		width: 45%;
+	}
+	.introduce .text_box,
+	.education .text_box{
+		gap: 20px;
+	}
+	
+	.intro h3{
+		margin-top: 100px;
+		text-align: center;
+		border-bottom: 1px solid;
+		padding-bottom: 20px;
+	}
+	.intro .text_box span,
+	.intro .text_box p,
+	.intro .text_box p a{
+		font-size: 15px;
+	}
+
+	/* project */
+
+	.project1_explan,
+	.project2_explan,
+	.project3_explan,
+	.project4_explan {
+		padding: 20px;
+	}
+	.project1_text .title h2,
+	.project2_text .title h2,
+	.project3_text .title h2,
+	.project4_text .title h2{
+		font-size: 25px;
+	}
+	.period_left{
+		margin-right: 10px;
+	}
+	.period_left span{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right p{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right span{
+		font-size: 18px;
+	}
+	.project1_explan .main_text p,
+	.project2_explan .main_text p,
+	.project3_explan .main_text p,
+	.project4_explan .main_text p{
+		font-size: 16px;
+		height: 300px;
+		overflow-y: scroll;
+		margin-bottom: 20px;
+		padding-right: 20px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar,
+	.project2_explan .main_text p::-webkit-scrollbar,
+	.project3_explan .main_text p::-webkit-scrollbar,
+	.project4_explan .main_text p::-webkit-scrollbar{
+		background-color: rgb(212, 212, 212);
+		width: 10px;
+		border-radius: 50px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar-thumb,
+	.project2_explan .main_text p::-webkit-scrollbar-thumb,
+	.project3_explan .main_text p::-webkit-scrollbar-thumb,
+	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+		background-color: rgb(170, 170, 170);
+		border-radius: 50px;
+	}
+	.project1 .project1_box2 .botton>a {
+		padding: 15px 15px;
+		
+	}
+	.project2 .project2_box .botton>a,
+	.project3 .project3_box2 .botton>a,
+	.project4 .project4_box .botton>a{
+		padding: 20px 40px;
+	}
+	.project4{
+		margin-bottom: 100px;
+	}
+	/* artwork */
+	.artwork_btn li a{
+		padding: 20px 100px;
+	}
+	.artwork_img .imgbox img{
+		width: 355px;
+		height: 355px;
+	}
+	footer{
+		padding: 0;
+	}
+	.footer{
+		padding-bottom: 0;
+	}
+	.footer_left{
+		margin-right: 0;
+	}
+	.footer_right{
+		margin-left: 0;
+		padding-right: 0;
+	}
+	.contect_num{
+		flex-direction: column;
+	}
+	.contect_num{
+		font-size: 18px;
+	}
+	.tel{
+		margin-bottom: 20px;
+	}
+
 }
