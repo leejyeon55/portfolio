@@ -1413,7 +1413,6 @@ footer .top span{
 	.banner_text .button1,
 	.banner_text .button2{
 		padding: 10px 15px;
-		margin-top: 230px;
 	}
 	/* section1 */
 	.section1 .intro{
@@ -1608,7 +1607,6 @@ footer .top span{
 ==================================== */	
 @media screen and (max-width: 768px) {
 	.inner {
-		max-width: 768px;
 		padding: 0 60px;
 	}
 	body{
@@ -1629,7 +1627,6 @@ footer .top span{
 		line-height: 130px;
 		text-align: center;
 	    justify-content: center;
-		max-width: 768px;
 		width: 100%;
 		position: fixed;
 		top:-100%;
