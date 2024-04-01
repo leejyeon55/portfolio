@@ -1,11 +1,66 @@
+
+// 반응형 스크롤메뉴
+
+$(()=>{const smGnb = $('.sm_gnb');
+const scrollThreshold = 770; 
+
+$(window).on('scroll', function () {
+    const scroll = $(window).scrollTop();
+    if (scroll <= scrollThreshold) {
+        smGnb.removeClass('fixed');
+    } else {
+        smGnb.addClass('fixed');
+    }
+});}
+)
+$("document").ready(function () {
+  $(".sm_gnb li a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+});
+
+//contact
+$("document").ready(function () {
+  $(".contact_me a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+});
+
+
+
+
 const el = document.querySelector('.followAnimation');
-//마우스 좌표
+
 let mouseX = 0;
 let mouseY = 0;
-//요소좌표
+
 let currentX = 0;
 let currentY = 0;
-//브라우저의 마우스 좌표값얻기
+
 document.addEventListener('mousemove',(e)=>{
     mouseX=e.clientX;
     mouseY=e.clientY;
@@ -17,8 +72,6 @@ function tick(){
     currentX += (mouseX - currentX) * .1;
     currentY += (mouseY - currentY) * .1;
     el.style.transform=`translate(${currentX}px,${currentY}px)`;
-    // el.style.left=currentX+'px';
-    // el.style.top=currentY+'px';
 
 }
 
@@ -113,6 +166,7 @@ tabs.each(function () {
     targetLink.removeClass("on");
     tg.addClass("on");
     tabContent.hide();
+    tabContent.addClass('on');
     $(currentLink).show();
   });
 });
@@ -170,8 +224,8 @@ gsap.to('.project4', {
 	duration: 1,
 	opacity:1
 });
-gsap.to('#contect', {
-	scrollTrigger: '#contect',
+gsap.to('#contact', {
+	scrollTrigger: '#contact',
 	padding: '0px',
 	duration: 1,
 	opacity:1
@@ -193,7 +247,7 @@ lightbox.on('click',function (){
 })
 
 
-//contect me
+//contact me
 document.addEventListener('mousemove',parallax);
 function parallax(e){
     this.querySelectorAll('.effect span').forEach((el) => {

@@ -113,6 +113,9 @@ nav ul{
 	top: 70%;
 	transform: translateY(-70%);
 }
+.sm_gnb{
+	display: none;
+}
 nav ul li a{
 	font-size: 18px;
 	font-family: 'NanumSquareNeo';
@@ -127,6 +130,9 @@ nav ul li a:hover{
 .banner_text{
 	width: 100%;
 	max-width: 70%;
+}
+.contact_me{
+	display: none;
 }
 .main_text #dynamic{
 	position: relative;
@@ -449,6 +455,9 @@ main{
 	padding-top: 28px;
 	border-bottom: 1px solid var(--text3);
 }
+.sm_period{
+	display: none;
+}
 .period_left{
 	margin-right: 18px;
 }
@@ -518,6 +527,7 @@ main{
 .project2{
 	opacity: 0;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
 }
@@ -775,6 +785,7 @@ main{
 .project4{
 	opacity: 0;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
 }
@@ -943,22 +954,19 @@ main{
 	padding-bottom: calc(var(--row) * 4);
 	overflow: hidden;
 }
-.artwork_img #tab1,
-.artwork_img #tab2,
-.artwork_img #tab3{
+.artwork_img>div{
+	width: 100%;
+	position: relative;
 	display: flex;
+	justify-content: space-between;
 }
-.artwork_img #tab1,
-.artwork_img #tab2{
-	gap: 100px;
+.artwork_img > div >.imgbox{
+	width: 30%;
+	position: relative;
 }
-.artwork_img #tab3{
-	gap: 100px;
-}
-.artwork_img .editorial img,
-.artwork_img .illustration img{
-	width: 500px;
-	height: 500px;
+.artwork_img > div >.imgbox> img{
+	width: 100%;
+	height: 100%;
 	border-radius: 20px;
 }
 .artwork_img > div{
@@ -967,13 +975,8 @@ main{
 .artwork_img > div.on {
 	display: flex;
 }
-.artwork_img .graphic img{
-	width: 500px;
-	height: 500px;
-	border-radius: 20px;
-}
-.imgbox{
-	position: relative;
+.sm_caption{
+	display: none;
 }
 .imgbox .caption{
 	position: absolute;
@@ -1034,7 +1037,7 @@ footer{
 .footer_right{
 	width: 50%;
 }
-.footer_right .contect h2{
+.footer_right .contact h2{
 	position: relative;
 	font-family: 'NanumSquareNeo';
 	font-weight: 700;
@@ -1042,7 +1045,7 @@ footer{
 	color: #202020;
 	margin-bottom: 56px;
 }
-.footer_right .contect h2::before{
+.footer_right .contact h2::before{
 	position: absolute;
 	content: '';
 	width: 50%;
@@ -1051,33 +1054,33 @@ footer{
 	bottom: -28px;
 	left: 0;
 }
-.footer_right .contect_text p{
+.footer_right .contact_text p{
 	font-size: 25px;
 	font-family: 'NanumSquareNeo';
 	line-height: 45px;
 }
-.contect_num {
+.contact_num {
 	margin-top: 28px;
 }
-.contect_num>div{
+.contact_num>div{
 	font-size: 20px;
 	font-family: 'NanumSquareNeo';
 	margin-right: 40px;
 	color: var(--text2);
 }
-.contect_num a{
+.contact_num a{
 	font-size: 20px;
 	font-family: 'NanumSquareNeo';
 	color: var(--text2);
 }
-.contect_num>div b{
+.contact_num>div b{
 	font-weight: bold;
 }
-.contect_btn{
+.contact_btn{
 	margin-bottom: calc(var(--row) * 8);
 }
-.contect_btn .button1,
-.contect_btn .button2{
+.contact_btn .button1,
+.contact_btn .button2{
 	border: 1px solid var(--primary1);
 	border-radius: 20px;
 	text-align: center;
@@ -1088,21 +1091,21 @@ footer{
 	margin-top: 28px;
 	cursor: pointer;
 }
-.contect_btn .button1:hover,
-.contect_btn .button2:hover{
+.contact_btn .button1:hover,
+.contact_btn .button2:hover{
 	background: var(--primary1);
 	border-radius: 20px;
 	color: #fff;
 	transition: all .5s;
 }
-.contect_btn i{
+.contact_btn i{
 	font-size: 2.5rem;
 }
-.contect_btn a{
+.contact_btn a{
 	color: #404040;
 }
-.contect_btn .button1 p,
-.contect_btn .button2 p{
+.contact_btn .button1 p,
+.contact_btn .button2 p{
 	font-size: 1.6rem;
 	font-family: 'NanumSquareNeo';
 	font-weight: 700;
@@ -1202,6 +1205,13 @@ footer .top span{
     z-index: 999;
     display: none;
 }
+#lightboxImage::-webkit-scrollbar{
+	background-color: rgb(212, 212, 212);
+	width: 20px;
+	}
+#lightboxImage::-webkit-scrollbar-thumb{
+	background-color: rgb(170, 170, 170);
+	}
 #lightboxImage{
     width: 80%;
     height: 80vh;
@@ -1209,357 +1219,449 @@ footer .top span{
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 /* ====================================
     ======= 반응형 1710 - ======    
 ==================================== */	
-@media screen and (min-width: 1643px) and (max-width: 1700px) {
+@media screen and (min-width: 1230px) and (max-width: 1700px) {
+	.inner {
+		padding: 0 80px;
+	}
 	.profile{
-		margin-right: 150px;
+		margin-right: 120px;
+	}
+	#lottie{
+		width: 25%;
 	}
 	.banner_text .main_text p{
-		font-size: 58px;
+		font-size: 50px;
 	}
+	header .rotate{
+		top: -335px;
+		left: -564px;
+	}
+	header::before{
+		width: 600px;
+		height: 600px;
+		top: -180px;
+		right: -167px;
+	}
+	header::after{
+		width: 1500px;
+		height: 1500px;
+		top: -350px;
+		left: -450px;
+	}
+	/* section1 */
+	.quicklee .intro_text{
+		font-size: 38px;
+		margin: 0;
+	}
+	.quicklee .img1 img{
+		width: 150px;
+	}
+	.quicklee .img2 img{
+		width: 100px;
+	}
+	.section1 .intro h3{
+		font-size: 25px;
+	}
+	.introduce .text_box,
+	.education .text_box{
+		font-size: 16px;
+		gap: 25px;
+	}
+	.introduce .text_box a,
+	.introduce .text_box p{
+		font-size: 16px;
+	}
+
+	.personalities .text_box span{
+		padding: 15px;
+		margin-right: 10px;
+		font-size: 16px;
+	}
+	
+
+	/* project */
+
 	.project1_explan,
 	.project2_explan,
 	.project3_explan,
 	.project4_explan {
-		padding: 30px;
+		padding: 20px;
+	}
+	.project1_text .title h2,
+	.project2_text .title h2,
+	.project3_text .title h2,
+	.project4_text .title h2{
+		font-size: 25px;
+	}
+	.period_left{
+		margin-right: 10px;
+	}
+	.period_left span{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right p{
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.period_right span{
+		font-size: 18px;
 	}
 	.project1_explan .main_text p,
 	.project2_explan .main_text p,
 	.project3_explan .main_text p,
 	.project4_explan .main_text p{
-		font-size: 18px;
+		font-size: 16px;
+		height: 300px;
+		overflow-y: scroll;
+		margin-bottom: 20px;
+		padding-right: 20px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar,
+	.project2_explan .main_text p::-webkit-scrollbar,
+	.project3_explan .main_text p::-webkit-scrollbar,
+	.project4_explan .main_text p::-webkit-scrollbar{
+		background-color: rgb(212, 212, 212);
+		width: 10px;
+		border-radius: 50px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar-thumb,
+	.project2_explan .main_text p::-webkit-scrollbar-thumb,
+	.project3_explan .main_text p::-webkit-scrollbar-thumb,
+	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+		background-color: rgb(170, 170, 170);
+		border-radius: 50px;
 	}
 	.project1 .project1_box2 .botton>a {
-		padding: 15px 20px;
+		padding: 15px 10px;
+		gap: 5px;
+		
+	}
+	.project1 .project1_box2 .botton>a p{
+		font-size: 16px;
 	}
 	.project2 .project2_box .botton>a,
 	.project3 .project3_box2 .botton>a,
 	.project4 .project4_box .botton>a{
-		padding: 20px 60px;
+		padding: 20px 30px;
 	}
-	.artwork_img .imgbox img{
-		width: 425px;
-		height: 425px;
+	.project4{
+		margin-bottom: 100px;
+	}
+	/* artwork */
+	.artwork_btn li a{
+		padding: 20px 100px;
+	}
+	footer{
+		padding: 0;
+	}
+	.footer{
+		padding-bottom: 0;
+	}
+	.footer_left{
+		margin-right: 0;
 	}
 	.footer_right{
 		margin-left: 0;
-		padding-right: 50px;
+		padding-right: 0;
 	}
-	.contect_num>div{
+	.contact_num{
+		flex-direction: column;
+	}
+	.contact_num{
+		font-size: 18px;
+	}
+	.tel{
+		margin-bottom: 20px;
+	}
+
+}
+@media screen and (min-width: 769px) and (max-width: 1229px) {
+	.profile{
+		margin:0;
+	}
+	nav .logo #lottie {
+		width: 20%;
+		margin-top: 30px;
+	}
+	.banner_text .main_text p{
+		font-size: 40px;
+		line-height: 80px;
+	}
+	header .rotate{
+		top: -488px;
+		left: -784px;
+	}
+	header::before{
+		width: 500px;
+		height: 500px;
+		top: -180px;
+		right: -167px;
+	}
+	header::after{
+		width: 1300px;
+		height: 1300px;
+		top: -350px;
+		left: -450px;
+	}
+	.banner_text .button1,
+	.banner_text .button2{
+		padding: 10px 15px;
+		margin-top: 230px;
+	}
+	/* section1 */
+	.section1 .intro{
+		margin-top: 70px;
+	}
+	.quicklee{
+		flex-direction: column-reverse;
+	}
+	.quicklee .img2{
+		display: none;
+	}
+	.quicklee .intro_text{
+		font-size: 35px;
+		margin-bottom: 60px;
+		justify-content: center;
+	}
+	.quicklee .img1{
+		display: flex;
+		justify-content: center;
+	}
+	.quicklee .img1 img{
+		width: 200px;
+	}
+	.section1 .intro h3{
+		font-size: 25px;
+	}
+	.personalities{
+		position: absolute;
+	}
+	.personalities h3{
+		display: none;
+	}
+	.personalities .text_box{
+		display: flex;
+		gap: 10px;
+	}
+	.introduce,.education{
+	margin-top: 100px;
+	}
+	.introduce h3,.education h3{
+		text-align: center;
+	}
+	.introduce .text_box,
+	.education .text_box{
+		font-size: 18px;
+		gap: 25px;
+	}
+	.introduce .text_box a{
+		font-size: 18px;
+	}
+	.education .text_box span,
+	.education .text_box p{
+		margin-bottom: 42px;
+	}
+	.personalities .text_box{
+		font-size: 18px;
+	}
+	.personalities .text_box span{
+		padding: 15px;
+		margin-right: 10px;
+	}
+
+	/* project */
+	.project1,
+	.project2,
+	.project3,
+	.project4 {
+		margin-bottom: 80px;
+	}
+	.project1_explan,
+	.project2_explan,
+	.project3_explan,
+	.project4_explan {
+		padding: 15px;
+	}
+	.project1_text .title h2,
+	.project2_text .title h2,
+	.project3_text .title h2,
+	.project4_text .title h2{
+		font-size: 25px;
+	}
+	.period_left{
+		margin-right: 5px;
+	}
+	.period_left span{
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.period_right p{
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.period_right span{
+		font-size: 16px;
+	}
+	.project1_explan .main_text p,
+	.project2_explan .main_text p,
+	.project3_explan .main_text p,
+	.project4_explan .main_text p{
+		font-size: 15px;
+		height: 200px;
+		overflow-y: scroll;
+		margin-bottom: 20px;
+		padding-right: 20px;
+		line-height: 30px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar,
+	.project2_explan .main_text p::-webkit-scrollbar,
+	.project3_explan .main_text p::-webkit-scrollbar,
+	.project4_explan .main_text p::-webkit-scrollbar{
+		background-color: rgb(212, 212, 212);
+		width: 10px;
+		border-radius: 50px;
+	}
+	.project1_explan .main_text p::-webkit-scrollbar-thumb,
+	.project2_explan .main_text p::-webkit-scrollbar-thumb,
+	.project3_explan .main_text p::-webkit-scrollbar-thumb,
+	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+		background-color: rgb(170, 170, 170);
+		border-radius: 50px;
+	}
+	.project1 .project1_box2 .botton>a {
+		padding:10px 5px;
+		gap: 5px;
+	}
+	.project1 .project1_box2 .botton>a p {
+		font-size: 12px;
+	}
+	.project2 .project2_box .botton>a,
+	.project3 .project3_box2 .botton>a,
+	.project4 .project4_box .botton>a{
+		padding: 10px 20px;
+	}
+
+	.project2 .project2_box .botton>a p,
+	.project3 .project3_box2 .botton>a p,
+	.project4 .project4_box .botton>a p{
+		font-size: 15px;
+	}
+	.project4{
+		margin-bottom: 100px;
+	}
+	/* artwork */
+	.artwork {
+		padding: 70px 0;
+	}
+	.artwork_btn li a{
+		padding: 20px 50px;
+	}
+	footer{
+		padding: 0;
+	}
+	.footer{
+		padding-bottom: 0;
+	}
+	.footer_left{
+		margin-right: 0;
+		padding: 0;
+	}
+	.footer_right{
 		margin-right: 20px;
-	}
-}
-@media screen and (min-width: 1387px) and (max-width: 1642px) {
-	.profile{
-		margin-right: 120px;
-	}
-	#lottie{
-		width: 25%;
-	}
-	.banner_text .main_text p{
-		font-size: 50px;
-	}
-	header .rotate{
-		top: -335px;
-		left: -564px;
-	}
-	header::before{
-		width: 600px;
-		height: 600px;
-		top: -180px;
-		right: -167px;
-	}
-	header::after{
-		width: 1500px;
-		height: 1500px;
-		top: -350px;
-		left: -450px;
-	}
-	/* section1 */
-	.quicklee .intro_text{
-		font-size: 38px;
-		margin: 0;
-	}
-	.quicklee .img1 img{
-		width: 150px;
-	}
-	.quicklee .img2 img{
-		width: 100px;
-	}
-	.section1 .intro h3{
-		font-size: 25px;
-	}
-	.introduce .text_box,
-	.education .text_box{
-		font-size: 18px;
-		gap: 25px;
-	}
-	.personalities .text_box{
-		font-size: 18px;
-	}
-	.personalities .text_box span{
-		padding: 15px;
-		margin-right: 10px;
-	}
-
-	/* project */
-
-	.project1_explan,
-	.project2_explan,
-	.project3_explan,
-	.project4_explan {
-		padding: 20px;
-	}
-	.project1_text .title h2,
-	.project2_text .title h2,
-	.project3_text .title h2,
-	.project4_text .title h2{
-		font-size: 25px;
-	}
-	.period_left{
-		margin-right: 10px;
-	}
-	.period_left span{
-		font-size: 18px;
-		margin-bottom: 22px;
-	}
-	.period_right p{
-		font-size: 18px;
-		margin-bottom: 22px;
-	}
-	.period_right span{
-		font-size: 18px;
-	}
-	.project1_explan .main_text p,
-	.project2_explan .main_text p,
-	.project3_explan .main_text p,
-	.project4_explan .main_text p{
-		font-size: 16px;
-		height: 300px;
-		overflow-y: scroll;
-		margin-bottom: 20px;
-		padding-right: 20px;
-	}
-	.project1_explan .main_text p::-webkit-scrollbar,
-	.project2_explan .main_text p::-webkit-scrollbar,
-	.project3_explan .main_text p::-webkit-scrollbar,
-	.project4_explan .main_text p::-webkit-scrollbar{
-		background-color: rgb(212, 212, 212);
-		width: 10px;
-		border-radius: 50px;
-	}
-	.project1_explan .main_text p::-webkit-scrollbar-thumb,
-	.project2_explan .main_text p::-webkit-scrollbar-thumb,
-	.project3_explan .main_text p::-webkit-scrollbar-thumb,
-	.project4_explan .main_text p::-webkit-scrollbar-thumb{
-		background-color: rgb(170, 170, 170);
-		border-radius: 50px;
-	}
-	.project1 .project1_box2 .botton>a {
-		padding: 15px 15px;
-		
-	}
-	.project2 .project2_box .botton>a,
-	.project3 .project3_box2 .botton>a,
-	.project4 .project4_box .botton>a{
-		padding: 20px 40px;
-	}
-	.project4{
-		margin-bottom: 100px;
-	}
-	/* artwork */
-	.artwork_btn li a{
-		padding: 20px 100px;
-	}
-	.artwork_img .imgbox img{
-		width: 355px;
-		height: 355px;
-	}
-	footer{
 		padding: 0;
 	}
-	.footer{
-		padding-bottom: 0;
+	.footer_right .contact h2{
+		font-size: 40px;
 	}
-	.footer_left{
-		margin-right: 0;
+	.footer_right .contact h2::before{
+		width: 70%;
 	}
-	.footer_right{
-		margin-left: 0;
-		padding-right: 0;
+	.footer_right .contact_text p{
+		font-size: 22px;
 	}
-	.contect_num{
+	.contact_num{
 		flex-direction: column;
 	}
-	.contect_num{
+	.contact_num{
 		font-size: 18px;
 	}
 	.tel{
 		margin-bottom: 20px;
 	}
-
+	.contact_btn .button1,
+	.contact_btn .button2{
+		padding: 10px 20px;
+		gap: 10px;
+		margin-right: 20px;
+		margin-top: 40px;
+	}
 }
-@media screen and (min-width: 900px) and (max-width: 1386px) {
-	.profile{
-		margin-right: 120px;
-	}
-	#lottie{
-		width: 25%;
-	}
-	.banner_text .main_text p{
-		font-size: 50px;
-	}
-	header .rotate{
-		top: -335px;
-		left: -564px;
-	}
-	header::before{
-		width: 600px;
-		height: 600px;
-		top: -180px;
-		right: -167px;
-	}
-	header::after{
-		width: 1500px;
-		height: 1500px;
-		top: -350px;
-		left: -450px;
-	}
-	/* section1 */
-	.quicklee .intro_text{
-		font-size: 38px;
-		margin: 0;
-	}
-	.quicklee .img1 img{
-		width: 150px;
-	}
-	.quicklee .img2 img{
-		width: 100px;
-	}
-	.section1 .intro h3{
-		font-size: 25px;
-	}
-	.introduce .text_box,
-	.education .text_box{
-		font-size: 18px;
-		gap: 25px;
-	}
-	.personalities .text_box{
-		font-size: 18px;
-	}
-	.personalities .text_box span{
-		padding: 15px;
-		margin-right: 10px;
-	}
-
-	/* project */
-
-	.project1_explan,
-	.project2_explan,
-	.project3_explan,
-	.project4_explan {
-		padding: 20px;
-	}
-	.project1_text .title h2,
-	.project2_text .title h2,
-	.project3_text .title h2,
-	.project4_text .title h2{
-		font-size: 25px;
-	}
-	.period_left{
-		margin-right: 10px;
-	}
-	.period_left span{
-		font-size: 18px;
-		margin-bottom: 22px;
-	}
-	.period_right p{
-		font-size: 18px;
-		margin-bottom: 22px;
-	}
-	.period_right span{
-		font-size: 18px;
-	}
-	.project1_explan .main_text p,
-	.project2_explan .main_text p,
-	.project3_explan .main_text p,
-	.project4_explan .main_text p{
-		font-size: 16px;
-		height: 300px;
-		overflow-y: scroll;
-		margin-bottom: 20px;
-		padding-right: 20px;
-	}
-	.project1_explan .main_text p::-webkit-scrollbar,
-	.project2_explan .main_text p::-webkit-scrollbar,
-	.project3_explan .main_text p::-webkit-scrollbar,
-	.project4_explan .main_text p::-webkit-scrollbar{
-		background-color: rgb(212, 212, 212);
-		width: 10px;
-		border-radius: 50px;
-	}
-	.project1_explan .main_text p::-webkit-scrollbar-thumb,
-	.project2_explan .main_text p::-webkit-scrollbar-thumb,
-	.project3_explan .main_text p::-webkit-scrollbar-thumb,
-	.project4_explan .main_text p::-webkit-scrollbar-thumb{
-		background-color: rgb(170, 170, 170);
-		border-radius: 50px;
-	}
-	.project1 .project1_box2 .botton>a {
-		padding: 15px 15px;
-		
-	}
-	.project2 .project2_box .botton>a,
-	.project3 .project3_box2 .botton>a,
-	.project4 .project4_box .botton>a{
-		padding: 20px 40px;
-	}
-	.project4{
-		margin-bottom: 100px;
-	}
-	/* artwork */
-	.artwork_btn li a{
-		padding: 20px 100px;
-	}
-	.artwork_img .imgbox img{
-		width: 355px;
-		height: 355px;
-	}
-	footer{
-		padding: 0;
-	}
-	.footer{
-		padding-bottom: 0;
-	}
-	.footer_left{
-		margin-right: 0;
-	}
-	.footer_right{
-		margin-left: 0;
-		padding-right: 0;
-	}
-	.contect_num{
-		flex-direction: column;
-	}
-	.contect_num{
-		font-size: 18px;
-	}
-	.tel{
-		margin-bottom: 20px;
-	}
-
-}
+/* ====================================
+    ======= 반응형 768 - ======    
+==================================== */	
 @media screen and (max-width: 768px) {
+	.inner {
+		max-width: 768px;
+		padding: 0 60px;
+	}
+	body{
+		overflow-x: hidden;
+	}
 	.profile{
 		display: none;
 	}
 	.gnb{
 		display: none;
+	}
+	.sm_gnb{
+		display: none;
+		background-color: #ffffff;
+		box-shadow: 0px 5px 20px rgba(0,0,0,.3);
+		border-radius:  0 0 30px 30px;
+		height: 100px;
+		line-height: 130px;
+		text-align: center;
+	    justify-content: center;
+		max-width: 768px;
+		width: 100%;
+		position: fixed;
+		top:-100%;
+		left: 0;
+		z-index: 9999;
+		transition: top 0.3s;
+	}
+	.sm_gnb li a{
+		font-size: 20px;
+	}
+	.sm_gnb.fixed{
+		display: flex;
+		top: 35px;
+	}
+	.contact_me{
+		display: block;
+	}
+	.contact_me a{
+		position: relative;
+		top: 70px;
+		right: 0;
+		padding: 10px 15px;
+		background-color: #000;
+		border-radius: 10px;
+		color: #fff;
+		align-items: center;
+		text-align: center;
+		font-size: 15px;
+		transition: all .5s;
+	}
+	.contact_me a:hover{
+		background-color: var(--primary1);
 	}
 	.banner_text .main_text p{
 		font-size: 45px;
@@ -1620,7 +1722,7 @@ footer .top span{
 	.personalities .text_top{
 		position: absolute;
 		top: 760px;
-		left: 21%;
+		left: 22%;
 		width: 100%;
 	}
 	.introduce,
@@ -1631,20 +1733,65 @@ footer .top span{
 	.education .text_box{
 		gap: 20px;
 	}
-	
+	.education .text_box .text_right b{
+		display: none;
+	}
 	.intro h3{
 		margin-top: 100px;
 		text-align: center;
 		border-bottom: 1px solid;
 		padding-bottom: 20px;
 	}
-	.intro .text_box span,
-	.intro .text_box p,
-	.intro .text_box p a{
+	.education .text_box span,
+	.education .text_box p,
+	.education .text_box p a{
 		font-size: 15px;
+		margin-bottom: 43px;
 	}
-
+	.introduce .text_box span,
+	.introduce .text_box p,
+	.introduce .text_box p a{
+		font-size: 18px;
+	}
+	.section2 .skill_bar{
+		flex-direction: column;
+		margin-top: 70px;
+	}
+	.skill_left,
+	.skill_right{
+		width: 100%;
+		margin: 0;
+	}
+	.skill_bar p{
+		font-size: 20px;
+	}
+	.skill_bar>div>div{
+		margin-bottom: 40px;
+	}
 	/* project */
+	.project1,
+	.project2,
+	.project3{
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
+	.project4{
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+	.project1_box,
+	.project2_box2,
+	.project3_box,
+	.project4_box2{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.project1_box2,
+	.project2_box,
+	.project3_box2,
+	.project4_box{
+		width: 100%;
+	}
 
 	.project1_explan,
 	.project2_explan,
@@ -1658,29 +1805,34 @@ footer .top span{
 	.project4_text .title h2{
 		font-size: 25px;
 	}
-	.period_left{
+	.period{
+		display: none;
+	}
+	.sm_period{
+		margin: 20px 0;
+		display: flex;
+		padding-bottom: 20px;
+		border-bottom: 1px solid var(--text3);
+	}
+	.sm_period p{
+		font-size: 13.5px;
 		margin-right: 10px;
+		font-weight: bold;
 	}
-	.period_left span{
-		font-size: 18px;
-		margin-bottom: 22px;
-	}
-	.period_right p{
-		font-size: 18px;
-		margin-bottom: 22px;
-	}
-	.period_right span{
-		font-size: 18px;
+	.sm_period span{
+		font-weight: normal;
+		margin-left: 3px;
 	}
 	.project1_explan .main_text p,
 	.project2_explan .main_text p,
 	.project3_explan .main_text p,
 	.project4_explan .main_text p{
-		font-size: 16px;
-		height: 300px;
+		font-size: 17px;
+		height: 150px;
 		overflow-y: scroll;
 		margin-bottom: 20px;
 		padding-right: 20px;
+		line-height: 30px;
 	}
 	.project1_explan .main_text p::-webkit-scrollbar,
 	.project2_explan .main_text p::-webkit-scrollbar,
@@ -1704,40 +1856,156 @@ footer .top span{
 	.project2 .project2_box .botton>a,
 	.project3 .project3_box2 .botton>a,
 	.project4 .project4_box .botton>a{
-		padding: 20px 40px;
-	}
-	.project4{
-		margin-bottom: 100px;
+		padding: 20px 50px;
 	}
 	/* artwork */
+	.artwork{
+		padding: 80px 0;
+	}
 	.artwork_btn li a{
-		padding: 20px 100px;
+		padding: 10px 30px;
+		font-size: 18px;
+		gap: 10px;
+		margin-bottom: 30px;
+	}
+	.artwork_img{
+		padding: 70px 0;
+		overflow: hidden;
+	}
+	.artwork_img > div >.imgbox:nth-child(1){
+		width: 100%;
+	}
+	.artwork_img > div >.imgbox:nth-child(2),
+	.artwork_img > div >.imgbox:nth-child(3){
+		display: none;
+	}
+	
+	.artwork_img .caption {
+		display: none;
+	}
+	.imgbox .sm_caption{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0,0,0,0);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		transition: all .5s;
+		opacity: 0;
+		border-radius: 20px;
+	}
+	.imgbox .sm_caption h2{
+		font-size: 3rem;
+		font-family: 'NanumSquareNeo';
+		font-weight: 500;
+		margin-bottom: 28px;
+	}
+	.imgbox .sm_caption span{
+		font-size: 1.6rem;
+	}
+	.imgbox:hover .sm_caption{
+		opacity: 1;
+		background-color: rgba(0,0,0,.5);
+	}
+	.imgbox .sm_caption a{
+		color: #fff;
+		font-size: 15px;
+		margin-top: 28px;
+		border: 1px solid;
+		border-radius: 10px;
+		width: 100px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-weight: 300;
 	}
 	.artwork_img .imgbox img{
-		width: 355px;
-		height: 355px;
+		width: 540px;
+		height: 540px;
 	}
 	footer{
 		padding: 0;
 	}
 	.footer{
 		padding-bottom: 0;
-	}
-	.footer_left{
-		margin-right: 0;
-	}
-	.footer_right{
-		margin-left: 0;
-		padding-right: 0;
-	}
-	.contect_num{
 		flex-direction: column;
 	}
-	.contect_num{
-		font-size: 18px;
+	.footer_left{
+		width: 100%;
+		margin: auto;
+		justify-content: center;
+	}
+	.footer_left .img3 img{
+		width: 250px;
+		margin-top: 150px;
+	}
+	.footer_right{
+		margin-top: 50px;
+		padding: 0;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
+	.footer_right .contact h2::before{
+		width: 80%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.contact_num{
+		flex-direction: column;
+		text-align: center;
+	}
+	.contact_num{
+		font-size: 20px;
+		margin-bottom: 40px;
 	}
 	.tel{
-		margin-bottom: 20px;
+		margin-bottom: 30px;
+	}
+	.contact_btn{
+		justify-content: center;
+		margin-bottom: 100px;
+		gap: 20px;
+	}
+	.contact_btn .button1,
+	.contact_btn .button2{	
+		margin: 0;
+		padding: 15px 30px;
+	}
+	.effect span:nth-child(1) {
+		top: 60%;
+		left: 70%;
+		background-color: #E82B59;
+		z-index: 3;
+	}
+	.effect span:nth-child(2) {
+		top: 65%;
+		left: 85%;
+		background-color: #F5F402;
+		z-index: 3;
+	}
+	.effect span:nth-child(3) {
+		top: 0;
+		left: 20%;
+		background-color: #2C67DB;
+		z-index: 3;
+	}
+	.effect span:nth-child(4) {
+		top: 73%;
+		left: 20%;
+		background-color: #FCA81F;
+		z-index: 3;
+	}
+	.effect span:nth-child(5) {
+		top: 25%;
+		left: 10%;
+		background-color: #E82B59;
+		z-index: 3;
 	}
 
 }
