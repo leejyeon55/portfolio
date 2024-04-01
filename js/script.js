@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // 반응형 스크롤메뉴
 
@@ -61,6 +62,16 @@ let mouseY = 0;
 let currentX = 0;
 let currentY = 0;
 
+=======
+const el = document.querySelector('.followAnimation');
+//마우스 좌표
+let mouseX = 0;
+let mouseY = 0;
+//요소좌표
+let currentX = 0;
+let currentY = 0;
+//브라우저의 마우스 좌표값얻기
+>>>>>>> 7a82ebf83326f784c1d0f62907d3849467be9e7c
 document.addEventListener('mousemove',(e)=>{
     mouseX=e.clientX;
     mouseY=e.clientY;
@@ -72,6 +83,11 @@ function tick(){
     currentX += (mouseX - currentX) * .1;
     currentY += (mouseY - currentY) * .1;
     el.style.transform=`translate(${currentX}px,${currentY}px)`;
+<<<<<<< HEAD
+=======
+    // el.style.left=currentX+'px';
+    // el.style.top=currentY+'px';
+>>>>>>> 7a82ebf83326f784c1d0f62907d3849467be9e7c
 
 }
 
@@ -224,8 +240,13 @@ gsap.to('.project4', {
 	duration: 1,
 	opacity:1
 });
+<<<<<<< HEAD
 gsap.to('#contact', {
 	scrollTrigger: '#contact',
+=======
+gsap.to('#contect', {
+	scrollTrigger: '#contect',
+>>>>>>> 7a82ebf83326f784c1d0f62907d3849467be9e7c
 	padding: '0px',
 	duration: 1,
 	opacity:1
@@ -247,7 +268,11 @@ lightbox.on('click',function (){
 })
 
 
+<<<<<<< HEAD
 //contact me
+=======
+//contect me
+>>>>>>> 7a82ebf83326f784c1d0f62907d3849467be9e7c
 document.addEventListener('mousemove',parallax);
 function parallax(e){
     this.querySelectorAll('.effect span').forEach((el) => {
