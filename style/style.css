@@ -1496,7 +1496,7 @@ footer .top span{
 		overflow-x: hidden;
 	}
 	.inner {
-		padding: 0 60px;
+		padding: 0 30px;
 	}
 	.banner_btn a p{
 		font-size: 2vw;
@@ -1535,7 +1535,7 @@ footer .top span{
 	}
 	.contact_me a{
 		position: relative;
-		top: 70px;
+		top: 40px;
 		right: 0;
 		padding: 10px 15px;
 		background-color: #000;
@@ -1565,8 +1565,14 @@ footer .top span{
 	header::after{
 		display: none;
 	}
+	.banner_text .main_text{
+		left: 10%;
+	}
+	.banner_text .banner_btn{
+		left: 10%;
+	}
 	.banner_text .banner_btn a{
-		padding: 20px 20px;
+		padding: 10px 15px;
 	}
 	.banner{
 		height: 660px;
@@ -1614,7 +1620,7 @@ footer .top span{
 	.personalities .text_top{
 		position: absolute;
 		top: 760px;
-		left: 21%;
+		left: 18%;
 		width: 100%;
 	}
 	.section1 .intro h3{
@@ -1767,7 +1773,7 @@ footer .top span{
 	.project2 .project2_box .botton>a,
 	.project3 .project3_box2 .botton>a,
 	.project4 .project4_box .botton>a{
-		padding: 20px 50px;
+		padding: 15px 30px;
 	}
 	.project1_box2 .botton a p{
 		font-size: 2vw;
