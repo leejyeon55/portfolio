@@ -799,16 +799,11 @@ main{
 	position: relative;
 	width: 60%;
 	background-color: #fff;
-	border-radius: 5px;
+	border-radius: 20px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
-	background: url(../img/project4.png) no-repeat center top;	
+	background: url(../img/mongday-mockup.png) no-repeat center top;	
 	transition: all 1.5s;
-	background-size: 100%;
-}
-.project4_box2:hover{
-	background: url(../img/project4.png) no-repeat center bottom;
-
 	background-size: 100%;
 }
 .project4_box2 img{
