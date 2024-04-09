@@ -530,9 +530,11 @@ main{
 .project2{
 	opacity: 0;
 	justify-content: space-between;
-	flex-direction: row-reverse;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
+}
+.section4 .recent_works{
+	margin-bottom: 200px;
 }
 .project2_box{
 	width: 38%;
@@ -659,6 +661,7 @@ main{
 .project3{
 	opacity: 0;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
 }
@@ -799,7 +802,7 @@ main{
 	position: relative;
 	width: 60%;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 5px;
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	background: url(../img/mongday-mockup.png) no-repeat center top;	
@@ -908,9 +911,138 @@ main{
 	color: #404040;
 }
 /* ====================================
-    ======= section7 ======    
+    ======= project5 ======    
 ==================================== */	
-.section7{
+.project5{
+	opacity: 0;
+	justify-content: space-between;
+	margin-top: 28px;
+	margin-bottom: calc(var(--row) * 8);
+}
+.project5_box{
+	position: relative;
+	width: 60%;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	background: url(../img/project5.png) no-repeat top;
+	transition: all 1.5s;
+	background-size: 100%;
+}
+.project5_box:hover{
+	background: url(../img/project5.png) no-repeat center bottom;
+	background-size: 100%;
+}
+.project5_box img{
+	width: 100%;
+	height: 100%;
+}
+.project5_box2{
+	width: 38%;
+}
+.project5_explan{
+	background: var(--bg);
+	border-radius: 20px;
+	padding: 50px;
+}
+.project5_text .title{
+	justify-content: space-between;
+	border-bottom: 1px solid var(--text3);
+}
+.project5_text .title h2{
+	font-size:  1.5vw;
+	font-family: 'NanumSquareNeo';
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.project5_text .title span{
+	font-size:  1.5vw;
+	line-height: 70px;
+	color: var(--text3);
+	position: relative;
+}
+.project5_text .title span:hover{
+	color: #404040;
+	transition: all .5s;
+	transform: translateX(20%);
+}
+.period{
+	padding-top: 28px;
+	border-bottom: 1px solid var(--text3);
+}
+.period_left{
+	margin-right: 20px;
+}
+.period_left span{
+	font-size: 1vw;
+	color: #808080;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 28px;
+}
+.period_right p{
+	font-size: 1vw;
+	color: #404040;
+	margin-bottom: 28px;
+}
+.period_right span{
+	font-size: 1vw;
+	color: #404040;
+	line-height: 20px;
+	margin-bottom: 28px;
+}
+.project5_explan .main_text{
+	margin-top: 28px;
+}
+.project5_explan .main_text p{
+	font-size: 1vw;
+	color: #404040;
+	font-family: 'NanumSquareNeo';
+	line-height: 45px;
+}
+.project5_explan .main_text b{
+	font-weight: bold;
+	color: var(--primary1);
+	opacity: .8;
+}
+.project5 .project5_box2 .botton{
+	justify-content: space-around;
+	margin-top: 28px;
+}
+.project5 .project5_box2 .botton>a{
+	border: 1px solid var(--primary1);
+	padding: 20px 30px;
+	border-radius: 20px;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+.project5 .project5_box2 .botton>a:hover{
+	background: var(--primary1);
+	border-radius: 20px;
+	transition: all .5s;
+}
+.project5 .project5_box2 .botton>a:hover p,
+.project5 .project5_box2 .botton>a:hover i,
+.project5 .project5_box2 .botton>a:hover span
+{
+	color: #fff;
+}
+.project5 .project5_box2 .botton i,
+.project5 .project5_box2 .botton span{
+	font-size: 2vh;
+	color: #404040;
+}
+
+.project5 .project5_box2 .botton>a p{
+	font-size: 2vh;
+	color: #404040;
+}
+/* ====================================
+    ======= section8 ======    
+==================================== */	
+.section8{
 	width: 100%;
 	background: #23252b;
 }
@@ -1338,19 +1470,22 @@ footer .top span{
 	.project1,
 	.project2,
 	.project3,
-	.project4 {
+	.project4,
+	.project5 {
 		margin-bottom: 80px;
 	}
 	.project1_explan,
 	.project2_explan,
 	.project3_explan,
-	.project4_explan {
+	.project4_explan,
+	.project5_explan {
 		padding: 15px;
 	}
 	.project1_text .title h2,
 	.project2_text .title h2,
 	.project3_text .title h2,
-	.project4_text .title h2{
+	.project4_text .title h2,
+	.project5_text .title h2{
 		font-size: 2.2vw;
 	}
 	.period_left{
@@ -1371,7 +1506,8 @@ footer .top span{
 	.project1_explan .main_text p,
 	.project2_explan .main_text p,
 	.project3_explan .main_text p,
-	.project4_explan .main_text p{
+	.project4_explan .main_text p,
+	.project5_explan .main_text p{
 		font-size: 1.5vw;
 		height: 200px;
 		overflow-y: scroll;
@@ -1382,7 +1518,8 @@ footer .top span{
 	.project1_explan .main_text p::-webkit-scrollbar,
 	.project2_explan .main_text p::-webkit-scrollbar,
 	.project3_explan .main_text p::-webkit-scrollbar,
-	.project4_explan .main_text p::-webkit-scrollbar{
+	.project4_explan .main_text p::-webkit-scrollbar,
+	.project5_explan .main_text p::-webkit-scrollbar{
 		background-color: rgb(212, 212, 212);
 		width: 10px;
 		border-radius: 50px;
@@ -1390,18 +1527,22 @@ footer .top span{
 	.project1_explan .main_text p::-webkit-scrollbar-thumb,
 	.project2_explan .main_text p::-webkit-scrollbar-thumb,
 	.project3_explan .main_text p::-webkit-scrollbar-thumb,
-	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+	.project4_explan .main_text p::-webkit-scrollbar-thumb,
+	.project5_explan .main_text p::-webkit-scrollbar-thumb{
 		background-color: rgb(170, 170, 170);
 		border-radius: 50px;
 	}
-	.project1 .project1_box2 .botton>a {
+	.project1 .project1_box2 .botton>a,
+	.project5 .project5_box2 .botton>a {
 		padding:10px 5px;
 		gap: 5px;
 	}
-	.project1 .project1_box2 .botton>a p {
+	.project1 .project1_box2 .botton>a p,
+	.project5 .project5_box2 .botton>a p {
 		font-size: 1.3vw;
 	}
-	.project1 .project1_box2 .botton>a i {
+	.project1 .project1_box2 .botton>a i,
+	.project5 .project5_box2 .botton>a i {
 		font-size: 1.3vw;
 	}
 	.project2 .project2_box .botton>a,
@@ -1423,7 +1564,8 @@ footer .top span{
 	.project1 .project1_box2 .botton>a span,
 	.project2 .project2_box .botton>a span,
 	.project3 .project3_box2 .botton>a span,
-	.project4 .project4_box .botton>a span{
+	.project4 .project4_box .botton>a span,
+	.project5 .project5_box2 .botton>a span{
 		font-size: 1.5vw;
 	}
 	.project4{
@@ -1677,44 +1819,47 @@ footer .top span{
 	}
 	.project1,
 	.project2,
-	.project3{
+	.project3,
+	.project4,
+	.project5{
 		flex-direction: column;
 		margin-bottom: 100px;
-	}
-	.project4{
-		flex-direction: column;
-		margin-bottom: 50px;
 	}
 	.project1_box,
 	.project2_box2,
 	.project3_box,
-	.project4_box2{
+	.project4_box2,
+	.project5_box{
 		width: 100%;
 		margin-bottom: 20px;
 	}
 	.project1_box2,
 	.project2_box,
 	.project3_box2,
-	.project4_box{
+	.project4_box,
+	.project5_box2{
 		width: 100%;
 	}
 
 	.project1_explan,
 	.project2_explan,
 	.project3_explan,
-	.project4_explan {
+	.project4_explan,
+	.project5_explan {
 		padding: 20px;
 	}
 	.project1_text .title h2,
 	.project2_text .title h2,
 	.project3_text .title h2,
-	.project4_text .title h2{
+	.project4_text .title h2,
+	.project5_text .title h2{
 		font-size: 4vw;
 	}
 	.project1_text .title span,
 	.project2_text .title span,
 	.project3_text .title span,
-	.project4_text .title span{
+	.project4_text .title span,
+	.project5_text .title span{
 		font-size: 4vw;
 	}
 	.period{
@@ -1738,7 +1883,8 @@ footer .top span{
 	.project1_explan .main_text p,
 	.project2_explan .main_text p,
 	.project3_explan .main_text p,
-	.project4_explan .main_text p{
+	.project4_explan .main_text p,
+	.project5_explan .main_text p{
 		font-size: 2.5vw;
 		height: 150px;
 		overflow-y: scroll;
@@ -1749,7 +1895,8 @@ footer .top span{
 	.project1_explan .main_text p::-webkit-scrollbar,
 	.project2_explan .main_text p::-webkit-scrollbar,
 	.project3_explan .main_text p::-webkit-scrollbar,
-	.project4_explan .main_text p::-webkit-scrollbar{
+	.project4_explan .main_text p::-webkit-scrollbar,
+	.project5_explan .main_text p::-webkit-scrollbar{
 		background-color: rgb(212, 212, 212);
 		width: 10px;
 		border-radius: 50px;
@@ -1757,11 +1904,13 @@ footer .top span{
 	.project1_explan .main_text p::-webkit-scrollbar-thumb,
 	.project2_explan .main_text p::-webkit-scrollbar-thumb,
 	.project3_explan .main_text p::-webkit-scrollbar-thumb,
-	.project4_explan .main_text p::-webkit-scrollbar-thumb{
+	.project4_explan .main_text p::-webkit-scrollbar-thumb,
+	.project5_explan .main_text p::-webkit-scrollbar-thumb{
 		background-color: rgb(170, 170, 170);
 		border-radius: 50px;
 	}
-	.project1 .project1_box2 .botton>a {
+	.project1 .project1_box2 .botton>a,
+	.project5 .project5_box2 .botton>a {
 		padding: 15px 15px;
 		
 	}
@@ -1770,7 +1919,8 @@ footer .top span{
 	.project4 .project4_box .botton>a{
 		padding: 15px 30px;
 	}
-	.project1_box2 .botton a p{
+	.project1_box2 .botton a p,
+	.project5_box2 .botton a p{
 		font-size: 2vw;
 	}
 	/* artwork */

@@ -224,9 +224,9 @@ gsap.to('.project4', {
 	duration: 1,
 	opacity:1
 });
-gsap.to('#contact', {
-	scrollTrigger: '#contact',
-	padding: '0px',
+gsap.to('.project5', {
+	scrollTrigger: '.project5',
+	y: '-100px',
 	duration: 1,
 	opacity:1
 });
