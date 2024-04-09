@@ -530,11 +530,9 @@ main{
 .project2{
 	opacity: 0;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
-}
-.section4 .recent_works{
-	margin-bottom: 200px;
 }
 .project2_box{
 	width: 38%;
@@ -661,7 +659,6 @@ main{
 .project3{
 	opacity: 0;
 	justify-content: space-between;
-	flex-direction: row-reverse;
 	margin-top: 28px;
 	margin-bottom: calc(var(--row) * 8);
 }
